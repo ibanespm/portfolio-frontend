@@ -23,18 +23,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     >
       <head>
         <ThemeModeScript />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className={`{jetBrainsMono.className} px-20`}>
+      <body className={`${jetBrainsMono.className} bg-gradient-to-t from-black via-gray-950 to-gray-900`}>
         <Navbar />
         <SectionLayout>{children}</SectionLayout>
       </body>
