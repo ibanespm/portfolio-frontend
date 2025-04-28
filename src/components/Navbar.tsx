@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
+
+
 export default function Navbar() {
   // Estado para controlar la visibilidad del menú en móvil
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=" bg-white border-gray-200 dark:bg-black fixed top-0 left-0 z-50">
+    <nav className="bg-white border-gray-200 dark:bg-black fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           href="/"

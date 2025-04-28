@@ -1,38 +1,56 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
+
+import { JetBrains_Mono } from "next/font/google";
+
+const jetBrains = JetBrains_Mono({ subsets: ['latin'] });
+
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-black to-gray-900 mt-5">
+    <div className={`flex flex-col min-h-screen mx-10 py-30 ${jetBrains.className}`}>
       {/* Sección Hero */}
-      <div className="relative bg-white dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
+      <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
-        <div className="relative z-10 m mx-auto text-center p-8">
-          <h1 className="text-4xl font-bold mb-10 mx-10 bg-gradient-to-r  whitespace-wrap  from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent">
-            Aprende a machine Learning  y Desarrollo Web
+        <div className="relative z-10 max-w-4xl mx-auto text-center p-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
+            Aprende Machine Learning y Desarrollo Web
           </h1>
 
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 md:mx-20 ">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
             Aprende a desarrollar proyectos web con tutoriales y cursos
             enfocados en crear software reales que puedes monetizar, vender o
             usar para tus propios proyectos.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="px-8 py-3 bg-black text-white rounded-lg hover:bg-neutral-600 transition font-medium border-2 border-white dark:border-gray-700">
-              Ver Contenido
-            </button>
-            <button className="px-8 py-3 font-medium border-2 border-black dark:border-gray-300 text-black dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-              Asesorías →
-            </button>
+            <Link href="/content">
+              <button className="px-8 py-3 bg-black text-white rounded-lg hover:bg-neutral-600 transition font-medium border-2 border-white dark:border-gray-700">
+                Ver Contenido
+              </button>
+            </Link>
+            <Link href="advice">
+              <button className="px-8 py-3 font-medium border-2 border-black dark:border-gray-300 text-black dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Asesorías →
+              </button>
+            </Link>
           </div>
         </div>
 
         {/* Imagen de fondo */}
         <div className="absolute inset-0 opacity-10 z-0">
-          <img
+          <Image
             src="https://wallpapers.com/images/hd/programming-hd-binary-code-map-jnb1a5krewais09o.jpg"
             alt="Background"
-            className="w-full h-full object-cover"
+            fill
+            quality={75}
+            priority={false}
+            className="object-cover"
+            style={{
+              //opacity: 0.9,
+            }}
+            unoptimized={true} // Opcional: si tienes problemas con la optimización
           />
         </div>
       </div>
@@ -127,10 +145,10 @@ export default function Page() {
         ].map((item) => (
           <div
             key={item.name}
-            className="h-40 bg-neutral-900 rounded-lg flex flex-col items-center justify-center gap-2"
+            className="h-40 bg-gradient-to-br from-black via-[#1111]  shadow-sm shadow-[#10ff2b]  rounded-lg flex flex-col items-center justify-center gap-2"
           >
             <div className="text-white py-4 ">{item.icon}</div>
-            <span className=" text-md  whitespace-wrap px font-bold text-[#10ff2b] ">
+            <span className=" text-md whitespace-wrap font-bold text-[#10ff2b] ">
               {item.name}
             </span>
           </div>
