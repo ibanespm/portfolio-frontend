@@ -3,13 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { JetBrains_Mono } from "next/font/google";
-
-const jetBrains = JetBrains_Mono({ subsets: ['latin'] });
-
 export default function Page() {
   return (
-    <div className={`flex flex-col min-h-screen mx-10 py-30 ${jetBrains.className}`}>
+    <div className={`flex flex-col min-h-screen mx-10 py-30`}>
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}

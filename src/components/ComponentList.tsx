@@ -73,12 +73,11 @@ export default function ContentList({ filters }: ContentListProps) {
                 <source src={item.url} />
               </video>
             ) : (
-              <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden">
+              <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden flex items-center justify-center">
                 <Image
                   src={item.url}
                   alt={item.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className="rounded-lg"
                 />
               </div>
