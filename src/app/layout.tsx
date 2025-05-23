@@ -1,7 +1,9 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { AuthProvider } from "@/context/AuthContext";
-import jetBrains from "next/font/google";
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '@fontsource/jetbrains-mono/700.css';
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -13,7 +15,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="min-h-screen flex flex-col jetbrains">
+      <body className="min-h-screen flex flex-col font-jetbrains-mono">
         <AuthProvider>
           <Navbar />
           <main className="flex-grow bg-gradient-to-br from-black via-[#0a0f14] to-[#1c1d1d]">

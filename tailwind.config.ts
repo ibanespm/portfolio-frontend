@@ -10,8 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-jetbrains-mono)', ...defaultTheme.fontFamily.mono],
-        'jetbrains': ['var(--font-jetbrains-mono)', ...defaultTheme.fontFamily.mono],
+        jetbrains: ['JetBrains Mono', 'monospace'],
+        'jetbrains-mono': ['JetBrains Mono', 'monospace'],
+
       },
     },
   },
