@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className={`flex flex-col min-h-screen mx-10 py-30`}>
+    <div className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-30`}>
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
