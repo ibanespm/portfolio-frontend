@@ -6,12 +6,12 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-30`}>
+    <div className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-25 xl:py-30`}>
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
         <div className="relative z-10 max-w-4xl mx-auto text-center p-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-10 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
             Aprende Machine Learning y Desarrollo Web
           </h1>
 
@@ -35,7 +35,6 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Imagen de fondo */}
         <div className="absolute inset-0 opacity-10 z-0">
           <Image
             src="https://wallpapers.com/images/hd/programming-hd-binary-code-map-jnb1a5krewais09o.jpg"
