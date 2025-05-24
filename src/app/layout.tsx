@@ -4,6 +4,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import '@fontsource/jetbrains-mono/700.css';
+import Footer from "@/components/Footer";
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <main className="flex-grow bg-gradient-to-br from-black via-[#0a0f14] to-[#1c1d1d]">
             {children}
           </main>
+          <Footer/>
         </AuthProvider>
       </body>
     </html>

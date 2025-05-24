@@ -13,6 +13,5 @@
 }
 
 body {
-  @apply bg-black;
   font-family: 'JetBrains Mono', monospace;
 }
