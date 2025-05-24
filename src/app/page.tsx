@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import api from "@/services/api";
+import axios from "axios";
+
 
 export default function Page() {
   return (
