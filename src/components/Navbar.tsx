@@ -262,7 +262,7 @@ export default function Navbar() {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 href="/pro"
                 className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -288,7 +288,7 @@ export default function Navbar() {
                 </svg>
                 PRO
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 href="/projects"

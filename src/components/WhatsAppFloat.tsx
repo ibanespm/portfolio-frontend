@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppFloat() {
   const [isHovered, setIsHovered] = useState(false);
-  const phoneNumber = "5211234567890";
+  const phoneNumber = "51926689920";
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
