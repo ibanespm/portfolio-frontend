@@ -37,7 +37,7 @@ export default function Page() {
 
         <div className="absolute inset-0 opacity-10 z-0">
           <Image
-            src="https://wallpapers.com/images/hd/programming-hd-binary-code-map-jnb1a5krewais09o.jpg"
+            src="assets/mapa.jpg"
             alt="Background"
             fill
             quality={75}

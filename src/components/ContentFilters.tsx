@@ -71,7 +71,7 @@ export default function ContentFilters({
   };
 
   return (
-    <div className="bg-[#0a0f14] border border-[#10ff2b] rounded-lg mb-6 p-5 max-w-5xl mx-auto">
+    <div className="bg-[#0a0f14] border border-[#10ff2b] rounded-lg mb-6 p-5 max-w-5xl mx-auto mt-20 sm:mt-0.5 md:mt-0 xl:mt-0">
       <h2 className=" font-semibold text-[#10ff2b] mb-4">Filtrar Contenido</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">

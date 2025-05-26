@@ -5,6 +5,7 @@ import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import '@fontsource/jetbrains-mono/700.css';
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -19,9 +20,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="min-h-screen flex flex-col font-jetbrains-mono">
         <AuthProvider>
           <Navbar />
-          <main className="flex-grow bg-gradient-to-br from-black via-[#0a0f14] to-[#1c1d1d]">
+          <main className="flex-grow bg-radial-[at_25%_25%] from-black via-[#0a0f14] to-[#1c1d1d]">
             {children}
           </main>
+          <WhatsAppFloat />
           <Footer/>
         </AuthProvider>
       </body>

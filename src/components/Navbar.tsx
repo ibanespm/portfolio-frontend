@@ -32,22 +32,9 @@ export default function Navbar() {
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <svg
-            width="33"
-            height="33"
-            viewBox="0 0 500 500"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-11 w-11" // Añade clases de Tailwind para controlar el tamaño
-          >
-            <polygon points="200,80 280,130 200,180 120,130" fill="#F05F5F" />
-            <polygon points="120,130 200,180 200,280 120,230" fill="#BE2170" />
-            <polygon points="200,180 280,130 280,230 200,280" fill="#6A2472" />
-            <polygon points="160,150 200,130 240,150 200,170" fill="#F05F5F" />
-            <polygon points="160,150 200,170 200,210 160,190" fill="#BE2170" />
-            <polygon points="200,170 240,150 240,190 200,210" fill="#6A2472" />
-          </svg>
-          <span className="self-center text-2xl font-bold whitespace-nowrap text-[#10ff2b]">
-            Franklin
+        |
+          <span className="self-center text-3xl font-bold whitespace-nowrap text-[#10ff2b]">
+            Portfolio Franklin
           </span>
         </Link>
 
