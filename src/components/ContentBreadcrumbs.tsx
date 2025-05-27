@@ -44,11 +44,11 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
 
         return (
           <div key={i} className="flex items-center">
-            <span className="mx-1 text-gray-500 flex items-center h-full">
-              {" > "}
+            <span className="mx-2 font-bold  text-gray-500 flex items-center h-full">
+              {" >   "}
             </span>
             {isLast ? (
-              <span className=" text-fuchsia-800">{label}</span>
+              <span className=" text-fuchsia-800 font-semibold">{label}</span>
             ) : (
               <Link href={href} className="hover:underline text-gray-300 ">
                 {`   ${label}`}

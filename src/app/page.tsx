@@ -2,25 +2,117 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
+import {
+  SiReact,
+  SiNestjs,
+  SiDjango,
+  SiJavascript,
+  SiDocker,
+  SiPostgresql,
+  SiLinux,
+  SiPython,
+  SiGit,
+  SiGithub,
+  SiJupyter,
+} from "react-icons/si";
 
 export default function Page() {
   return (
-    <div className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-25 xl:py-20`}>
+    <div
+      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-25 xl:py-20`}
+    >
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center p-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-10 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
-            Aprende Machine Learning y Desarrollo Web
+        <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-4 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
+            Desarrollador de Software & Machine Learning
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Aprende a desarrollar proyectos web con tutoriales y cursos
-            enfocados en crear software reales que puedes monetizar, vender o
-            usar para tus propios proyectos.
+          <p className="text-2x md:text-md text-gray-600 dark:text-gray-300 mb-8">
+          Soy desarrollador fullstack con experiencia en React, NestJS, Django y JavaScript. Me gusta crear software funcional y dinámico, enfocado en resolver problemas reales. También trabajo con Docker y bases de datos SQL para construir aplicaciones escalables. Me interesa el machine learning y busco aplicar soluciones inteligentes en mis proyectos.
+          En este portafolio comparto artículos, blogs y fragmentos de código. Si quieres aprender a programar o colaborar, estaré encantado de ayudarte.
           </p>
+          <div className="my-4 border-2 border-[#10ff2b] rounded-lg">
+            <h2 className="text-2xl font-semibold text-[#10ff2b] mb-4">
+              Tecnologías
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-6 gap-6 text-center text-white p-3">
+              <div className="flex flex-col items-center">
+                <SiReact size={32} color="#61DAFB" />
+                <span className="mt-2 text-sm">React</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiNestjs size={32} color="#E0234E" />
+                <span className="mt-2 text-sm">NestJS</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiDjango size={32} color="#092E20" />
+                <span className="mt-2 text-sm">Django</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiJavascript size={32} color="#F7DF1E" />
+                <span className="mt-2 text-sm">JavaScript</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiDocker size={32} color="#2496ED" />
+                <span className="mt-2 text-sm">Docker</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiPostgresql size={32} color="#336791" />
+                <span className="mt-2 text-sm">PostgreSQL</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiLinux size={32} color="#FCC624" />
+                <span className="mt-2 text-sm">Linux</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiPython size={32} color="#3776AB" />
+                <span className="mt-2 text-sm">Python</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiGit size={32} color="#F05032" />
+                <span className="mt-2 text-sm">Git</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <SiGithub size={32} color="#ffffff" />
+                <span className="mt-2 text-sm">GitHub</span>
+              </div>
 
+              <div className="flex flex-col items-center">
+                <img
+                  src="assets/scikit-learn.png"
+                  alt="Mi Icono"
+                  className="w-8 h-8"
+                />
+                <span className="mt-2 text-sm">Scikit-learn</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src="assets/tensorflow.png"
+                  alt="Mi Icono"
+                  className="w-8 h-8"
+                />
+                <span className="mt-2 text-sm">TensorFlow</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src="assets/pandas.png"
+                  alt="Mi Icono"
+                  className="w-8 h-8"
+                />
+                <span className="mt-2 text-sm">Pandas</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src="assets/numpy.png"
+                  alt="Mi Icono"
+                  className="w-8 h-8"
+                />
+                <span className="mt-2 text-sm">NumPy</span>
+              </div>
+            </div>
+          </div>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/content">
               <button className="px-8 py-3 bg-black text-white rounded-lg hover:bg-neutral-600 transition font-medium border-2 border-white dark:border-gray-700">
@@ -28,7 +120,7 @@ export default function Page() {
               </button>
             </Link>
             <Link href="advice">
-              <button className="px-8 py-3 font-medium border-2 border-black dark:border-gray-300 text-black dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <button className="px-8 py-3 font-medium border-2 border-black dark:border-gray-300 text-black dark:text-white rounded-lg hover:text-black hover:border-[#10ff2b] dark:hover:border-black dark:hover:bg-[#10ff2b] transition">
                 Asesorías →
               </button>
             </Link>
@@ -43,15 +135,17 @@ export default function Page() {
             quality={75}
             priority={false}
             className="object-cover"
-            style={{
-              //opacity: 0.9,
-            }}
+            style={
+              {
+                //opacity: 0.9,
+              }
+            }
             unoptimized={true} // Opcional: si tienes problemas con la optimización
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8 px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8 px-4  text-center">
         {[
           {
             name: "Artículos Medium",
