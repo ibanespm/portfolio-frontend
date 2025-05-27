@@ -13,7 +13,6 @@ import {
   SiPython,
   SiGit,
   SiGithub,
-  SiJupyter,
 } from "react-icons/si";
 
 export default function Page() {
@@ -30,8 +29,14 @@ export default function Page() {
           </h1>
 
           <p className="text-2x md:text-md text-gray-600 dark:text-gray-300 mb-8">
-          Soy desarrollador fullstack con experiencia en React, NestJS, Django y JavaScript. Me gusta crear software funcional y dinámico, enfocado en resolver problemas reales. También trabajo con Docker y bases de datos SQL para construir aplicaciones escalables. Me interesa el machine learning y busco aplicar soluciones inteligentes en mis proyectos.
-          En este portafolio comparto artículos, blogs y fragmentos de código. Si quieres aprender a programar o colaborar, estaré encantado de ayudarte.
+            Soy desarrollador fullstack con experiencia en React, NestJS, Django
+            y JavaScript. Me gusta crear software funcional y dinámico, enfocado
+            en resolver problemas reales. También trabajo con Docker y bases de
+            datos SQL para construir aplicaciones escalables. Me interesa el
+            machine learning y busco aplicar soluciones inteligentes en mis
+            proyectos. En este portafolio comparto artículos, blogs y fragmentos
+            de código. Si quieres aprender a programar o colaborar, estaré
+            encantado de ayudarte.
           </p>
           <div className="my-4 border-2 border-[#10ff2b] rounded-lg">
             <h2 className="text-2xl font-semibold text-[#10ff2b] mb-4">
@@ -80,34 +85,38 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col items-center">
-                <img
-                  src="assets/scikit-learn.png"
-                  alt="Mi Icono"
-                  className="w-8 h-8"
+                <Image
+                  src="/assets/scikit-learn.png"
+                  alt="Scikit-learn"
+                  width={32}
+                  height={32}
                 />
                 <span className="mt-2 text-sm">Scikit-learn</span>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src="assets/tensorflow.png"
-                  alt="Mi Icono"
-                  className="w-8 h-8"
+                <Image
+                  src="/assets/tensorflow.png"
+                  alt="TensorFlow"
+                  width={32}
+                  height={32}
                 />
                 <span className="mt-2 text-sm">TensorFlow</span>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src="assets/pandas.png"
-                  alt="Mi Icono"
-                  className="w-8 h-8"
+                <Image
+                  src="/assets/pandas.png"
+                  alt="Pandas"
+                  width={32}
+                  height={32}
                 />
                 <span className="mt-2 text-sm">Pandas</span>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src="assets/numpy.png"
-                  alt="Mi Icono"
-                  className="w-8 h-8"
+                <Image
+                  src="/assets/numpy.png"
+                  alt="NumPy"
+                  width={32}
+                  height={32}
                 />
                 <span className="mt-2 text-sm">NumPy</span>
               </div>
