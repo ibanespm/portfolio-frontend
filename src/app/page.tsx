@@ -25,18 +25,15 @@ export default function Page() {
         {/* Contenido principal */}
         <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-4 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
-            Desarrollador de Software & Machine Learning
+            Desarrollador de Software
           </h1>
 
           <p className="text-2x md:text-md text-gray-600 dark:text-gray-300 mb-8">
-            Soy desarrollador fullstack con experiencia en React, NestJS, Django
-            y JavaScript. Me gusta crear software funcional y dinámico, enfocado
-            en resolver problemas reales. También trabajo con Docker y bases de
-            datos SQL para construir aplicaciones escalables. Me interesa el
-            machine learning y busco aplicar soluciones inteligentes en mis
-            proyectos. En este portafolio comparto artículos, blogs y fragmentos
-            de código. Si quieres aprender a programar o colaborar, estaré
-            encantado de ayudarte.
+            Soy desarrollador Fullstack en React, NestJS, Django y
+            JavaScript.También trabajo con Docker y bases de datos SQL para
+            construir aplicaciones escalables. En este portafolio comparto
+            artículos, blogs y fragmentos de código. Si quieres aprender a
+            programar o colaborar, estaré encantado de ayudarte.
           </p>
           <div className="my-4 border-2 border-[#10ff2b] rounded-lg">
             <h2 className="text-2xl font-semibold text-[#10ff2b] mb-4">

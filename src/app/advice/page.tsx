@@ -52,10 +52,15 @@ export default function Page() {
 
   const handlePayPalPayment = () => {
     console.log("Iniciando pago con PayPal", formData);
-    alert(`Redirigiendo a PayPal para completar el pago de $${formData.amount}`);
+    alert(
+      `Redirigiendo a PayPal para completar el pago de $${formData.amount}`
+    );
 
     // Redirige al usuario a la URL de PayPal para completar el pago
-    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu-email@paypal.com&item_name=Asesoria&amount=" + formData.amount + "&currency_code=USD"; // Reemplazar con los parámetros reales de PayPal
+    window.location.href =
+      "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu-email@paypal.com&item_name=Asesoria&amount=" +
+      formData.amount +
+      "&currency_code=USD"; // Reemplazar con los parámetros reales de PayPal
   };
 
   const handlePayUPayment = () => {
@@ -63,7 +68,6 @@ export default function Page() {
     alert(`Redirigiendo a PayU para completar el pago de $${formData.amount}`);
     window.open("https://biz.payulatam.com/L0f9e9a9F467048", "_blank");
   };
-  
 
   return (
     <div
@@ -82,7 +86,7 @@ export default function Page() {
       </div>
 
       {/* Contenido principal */}
-      <div className="relative w-full max-w-7xl dark:bg-neutral-900/80 bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden flex flex-col lg:flex-row gap-8 p-6 sm:p-10 border border-gray-200 dark:border-gray-700 shadow-xl z-10">
+      <div className="relative w-full max-w-7xl bg-[#0a0f14] rounded-2xl overflow-hidden flex flex-col lg:flex-row gap-8 p-6 sm:p-10 border border-gray-200 dark:border-[#10ff2b] shadow-xl z-10">
         {/* Columna izquierda - Métodos de pago */}
         <div className="lg:order-1 order-2 flex-1 flex flex-col justify-center p-6 sm:p-8">
           <div className="mb-8">
@@ -117,10 +121,10 @@ export default function Page() {
         </div>
 
         {/* Separador visual */}
-        <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 my-4"></div>
+        <div className="lg:hidden border border-[#10ff2b] dark:border-[#10ff2b] my-4"></div>
 
         {/* Columna derecha - Descripción */}
-        <div className="lg:order-2 order-1 flex-1 p-6 sm:p-8 flex flex-col justify-center border-l-0 lg:border-l border-gray-200 dark:border-gray-700 lg:pl-10">
+        <div className="lg:order-2 order-1 flex-1 p-6 sm:p-8 flex flex-col justify-center border-l-0 lg:border-l border-[#10ff2b] dark:border-[#10ff2b] lg:pl-10">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
             Asesoría Especializada en Tecnología
           </h1>
@@ -131,13 +135,10 @@ export default function Page() {
               <span className="font-bold text-[#00d1b2]">Python</span>,{" "}
               <span className="font-bold text-[#10ff2b]">Machine Learning</span>{" "}
               y <span className="font-bold text-[#00d1b2]">Desarrollo Web</span>{" "}
-              con nuestros expertos.
             </p>
 
             <p className="text-lg md:text-xl text-white dark:text-gray-300 leading-relaxed">
-              Desarrolla proyectos reales que puedas monetizar, vender o
-              implementar en tus propios negocios.
-            </p>
+                    Si necesitas ayuda para integrar con NestJS, Python, Machine Learning o Desarrollo Web, te invito a que me contactes.          </p>
           </div>
         </div>
       </div>
