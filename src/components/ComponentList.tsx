@@ -63,7 +63,7 @@ export default function ContentList({ filters }: ContentListProps) {
         <Link href={`/content/${item._id}`} key={item._id}>
           <article
             key={item._id}
-            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-[#ffffff] shadow-md w-full max-w-md flex flex-col justify-between h-full "
+            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-[#10ff2b] shadow-md w-full max-w-md flex flex-col justify-between h-full "
           >
             {item.type === "video" ? (
               <video

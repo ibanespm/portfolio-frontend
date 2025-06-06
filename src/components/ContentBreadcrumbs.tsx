@@ -12,7 +12,7 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <nav className="flex items-center text-sm text-gray-400 mb-4  sm:mx-8 md:mx-12 lg:mx-15">
+    <nav className="flex items-center text-sm text-gray-400 mb-4   sm:mx-8 md:mx-12 lg:mx-15 font-bold">
       <Link
         href="/"
         className="hover:text-gray-600 text-gray-300 flex items-center"
@@ -39,18 +39,18 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
         const isLast = i === segments.length - 1;
         const label =
           segment === "content"
-            ? "Content"
+            ? "Contenido"
             : decodeURIComponent(currentTitle || segment);
 
         return (
           <div key={i} className="flex items-center">
-            <span className="mx-2 font-bold  text-gray-500 flex items-center h-full">
+            <span className="mx-2 font-bold  text-gray-500 flex items-center h-full ">
               {" >   "}
             </span>
             {isLast ? (
               <span className=" text-fuchsia-800 font-semibold">{label}</span>
             ) : (
-              <Link href={href} className="hover:underline text-gray-300 ">
+              <Link href={href} className="hover:underline text-gray-500 ">
                 {`   ${label}`}
               </Link>
             )}
