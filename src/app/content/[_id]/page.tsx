@@ -62,7 +62,7 @@ export default function ContentDetail() {
           toast.success("URL copied to clipboard!");
         })
         .catch((err) => {
-          toast.error("Failed to copy URL");
+          toast.error("Failed to copy URL", err);
         });
     }
   };
@@ -99,10 +99,12 @@ export default function ContentDetail() {
         <div className="flex flex-col md:flex-row justify-between gap-y-5 items-center p-4">
           <div className="flex items-center space-x-4">
             <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full cursor-pointer">
-              <img
+              <Image
                 className="aspect-square h-full w-full"
                 alt="Contenedores para Desarrolladores"
                 src="https://res.cloudinary.com/fazt/image/upload/c_scale,w_50/v1565754117/icons/docker-icon.svg"
+                width={50}
+                height={50}
               />
             </span>
             <div>
