@@ -8,6 +8,7 @@ import { Share2, Clock, Calendar } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { format } from "date-fns";
 
+
 interface Content {
   _id: string;
   title: string;
@@ -95,23 +96,15 @@ export default function ContentDetail() {
   return (
     <div className="flex flex-col min-h-screen   max-w-5xl mx-auto mt-30 sm:mt-20 md:mt-28 lg:mt-20">
       <Breadcrumb currentTitle={content.title} />
-      <div className="flex flex-col rounded-xl border-4 border-double border-[#10ff2b] bg-gradient-to-br from-[#0a0f14] to-[#001111] text-white shadow-md mt-2">
+      <div className="flex flex-col rounded-xl shadow-lg border-[1px] bg-gradient-to-br from-[#0a0f14] to-[#001111] text-white mt-2">
         <div className="flex flex-col md:flex-row justify-between gap-y-5 items-center p-4">
           <div className="flex items-center space-x-4">
             <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full cursor-pointer">
-              <Image
-                className="aspect-square h-full w-full"
-                alt="Contenedores para Desarrolladores"
-                src="https://res.cloudinary.com/fazt/image/upload/c_scale,w_50/v1565754117/icons/docker-icon.svg"
-                width={50}
-                height={50}
-              />
+              
             </span>
             <div>
               <h1 className="text-sm md:text-xl font-bold">{content.title}</h1>
-              <h3 className="text-xs md:text-sm text-muted-foreground">
-                Contenedores para Desarrolladores
-              </h3>
+              
             </div>
           </div>
           <div className="flex gap-x-2">
