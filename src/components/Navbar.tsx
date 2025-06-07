@@ -34,7 +34,7 @@ export default function Navbar() {
         >
         |
           <span className="self-center text-3xl font-bold whitespace-nowrap text-[#10ff2b]">
-            Portafolio Ibañes
+            Franklin
           </span>
         </Link>
 
