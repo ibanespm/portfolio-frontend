@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Breadcrumb } from "@/components/ContentBreadcrumbs";
 import { useParams } from "next/navigation";
-import { Share2, ExternalLink, Clock, Calendar } from "lucide-react";
+import { Share2, Clock, Calendar } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { format } from "date-fns";
 

@@ -90,7 +90,7 @@ export default function Page() {
                 />
                 <span className="mt-2 text-sm">Scikit-learn</span>
               </div>
-              <div className="flex flex-col items-center">
+              {/* <div className="flex flex-col items-center">
                 <Image
                   src="/assets/tensorflow.png"
                   alt="TensorFlow"
@@ -98,7 +98,7 @@ export default function Page() {
                   height={32}
                 />
                 <span className="mt-2 text-sm">TensorFlow</span>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center">
                 <Image
                   src="/assets/pandas.png"
