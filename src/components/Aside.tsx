@@ -1,7 +1,7 @@
 "use client";
 
 // components/Aside.tsx
-import React, { useState } from "react";
+import React from "react";
 import { FaDownload, FaMedium, FaWhatsapp } from "react-icons/fa";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 
@@ -57,57 +57,69 @@ export const Aside: React.FC<AsideProps> = ({ className = "" }) => {
         </div>
 
         {/* Botones de CV */}
-        <button
-          onClick={() => handleDownloadCV("es")}
-          className={`w-full  text-gray-400 bg-black border-b-amber-400 py-3 rounded-lg flex items-center justify-center  transition-all duration-200`}
+        <a
+          className={`bg-gradient-to-r gap-2 from-[#10ff2b] via-[#11aa2b] to-[#11fa2b]  text-black  border-b-amber-400 py-3 rounded-lg flex items-center justify-center  transition-all duration-200`}
+         href="assets/FranklinCV.pdf"
+         target="_blank"
+         download
         >
-          <FaDownload />
-          <span className="font-medium text-lg  " >Descargar CV</span>
-        </button>
+          <FaDownload size={24} />
+          <span className="font-medium text-lg  ">Descargar CV</span>
+        </a>
 
         {/* Enlaces de contacto */}
         <div className="pt-4">
           
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center gap-5">
             <a
               href="ibanesp59@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#10ff2b] transition-colors"
+              className="group relative hover:text-[#10ff2b] transition-colors"
+              title="Gmail"
             >
               <SiGmail size={24} className="text-red-400" />
+              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#0a0f14] text-[#10ff2b] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">Gmail</span>
             </a>
             <a
-              href="https://linkedin.com/in/tuperfil"
+              href="https://linkedin.com/in/ibanespm"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#10ff2b] transition-colors"
+              className="group relative hover:text-[#10ff2b] transition-colors"
+              title="LinkedIn"
             >
               <SiLinkedin size={24} className="text-blue-500" />
+              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#0a0f14] text-[#10ff2b] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">LinkedIn</span>
             </a>
             <a
               href="https://github.com/tuperfil"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#10ff2b] transition-colors"
+              className="group relative hover:text-[#10ff2b] transition-colors"
+              title="GitHub"
             >
               <SiGithub size={24} className="text-gray-300" />
+              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#0a0f14] text-[#10ff2b] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">GitHub</span>
             </a>
             <a
               href="https://wa.me/+51926689920"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#10ff2b] transition-colors"
+              className="group relative hover:text-[#10ff2b] transition-colors"
+              title="WhatsApp"
             >
               <FaWhatsapp size={24} className="text-green-400" />
+              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#0a0f14] text-[#10ff2b] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">WhatsApp</span>
             </a>
             <a
               href="https://medium.com/@ibaesperezmuoz"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#10ff2b] transition-colors"
+              className="group relative hover:text-[#10ff2b] transition-colors"
+              title="Medium"
             >
               <FaMedium size={24} />
+              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#0a0f14] text-[#10ff2b] text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200">Medium</span>
             </a>
           </div>
         </div>
