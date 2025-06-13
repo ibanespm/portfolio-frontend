@@ -244,36 +244,6 @@ export default function Navbar() {
               </Link>
             </li>
 
-            <li>
-              <Link
-                href="/red"
-                className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive("/red")
-                    ? "bg-gradient-to-r text-[#10ff2b]"
-                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-                } hover:bg-gray-50 dark:hover:bg-gray-700`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-share2 w-5 h-5"
-                >
-                  <circle cx="18" cy="5" r="3"></circle>
-                  <circle cx="6" cy="12" r="3"></circle>
-                  <circle cx="18" cy="19" r="3"></circle>
-                  <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
-                  <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
-                </svg>
-                Redes
-              </Link>
-            </li>
 
             {/* <li>
               <Link

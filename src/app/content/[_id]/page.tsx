@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { Breadcrumb } from "@/components/ContentBreadcrumbs";
 import { useParams } from "next/navigation";
 import { Clock, Calendar } from "lucide-react";
-import { toast } from "react-hot-toast";
 import { format } from "date-fns";
 
 
@@ -26,7 +25,6 @@ export default function ContentDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const params = useParams() as { _id: string };
-  const currentUrl = window.location.href;
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -47,26 +45,7 @@ export default function ContentDetail() {
     fetchContent();
   }, [params._id]);
 
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator
-        .share({
-          title: content?.title || "",
-          text: content?.description || "",
-          url: currentUrl,
-        })
-        .catch((err) => console.log("Error sharing:", err));
-    } else {
-      navigator.clipboard
-        .writeText(currentUrl)
-        .then(() => {
-          toast.success("URL copied to clipboard!");
-        })
-        .catch((err) => {
-          toast.error("Failed to copy URL", err);
-        });
-    }
-  };
+
 
   if (isLoading) {
     return (
