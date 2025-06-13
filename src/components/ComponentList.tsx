@@ -58,12 +58,12 @@ export default function ContentList({ filters }: ContentListProps) {
   if (content.length === 0) return <p>No hay contenido disponible.</p>;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-10  mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-30  ">
+    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-10 mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-20  ">
       {content.map((item) => (
         <Link href={`/content/${item._id}`} key={item._id}>
           <article
             key={item._id}
-            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-[#10ff2b] shadow-md w-full max-w-md flex flex-col justify-between h-full "
+            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-b-white/20  shadow-md w-full max-w-md flex flex-col justify-between h-full "
           >
             {item.type === "video" ? (
               <video

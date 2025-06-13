@@ -12,7 +12,7 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <nav className="flex items-center text-sm text-gray-400 rounded-lg mb-4 font-bold bg-gradient-to-r from-[#0a0f14] to-[#10ff2b]/20 backdrop-blur-md border-b border-[#10ff2b]/10 p-5">
+    <nav className="flex items-center text-sm text-gray-400 rounded-lg mb-4 font-bold bg-gradient-to-r  backdrop-blur-md from-black border-b border-[#10ff2b]/10 p-5">
       {" "}
       <Link
         href="/"
@@ -48,7 +48,7 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
               {" >   "}
             </span>
             {isLast ? (
-              <span className=" text-red-500 text-lg font-semibold">
+              <span className=" text-primary-600 text-lg font-semibold">
                 {label}
               </span>
             ) : (
