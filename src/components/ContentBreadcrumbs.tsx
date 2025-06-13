@@ -12,7 +12,8 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <nav className="flex items-center text-sm text-gray-400 mb-4   sm:mx-8 md:mx-12 lg:mx-15 font-bold">
+    <nav className="flex items-center text-sm text-gray-400 rounded-lg mb-4 font-bold bg-gradient-to-r from-[#0a0f14] to-[#10ff2b]/20 backdrop-blur-md border-b border-[#10ff2b]/10 p-5">
+      {" "}
       <Link
         href="/"
         className="hover:text-gray-600 text-gray-300 flex items-center"
@@ -33,7 +34,6 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
           <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
         </svg>
       </Link>
-
       {segments.map((segment, i) => {
         const href = "/" + segments.slice(0, i + 1).join("/");
         const isLast = i === segments.length - 1;
@@ -48,7 +48,9 @@ export const Breadcrumb = ({ currentTitle }: BreadcrumbProps) => {
               {" >   "}
             </span>
             {isLast ? (
-              <span className=" text-fuchsia-800 font-semibold">{label}</span>
+              <span className=" text-red-500 text-lg font-semibold">
+                {label}
+              </span>
             ) : (
               <Link href={href} className="hover:underline text-gray-500 ">
                 {`   ${label}`}

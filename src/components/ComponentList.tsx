@@ -58,7 +58,7 @@ export default function ContentList({ filters }: ContentListProps) {
   if (content.length === 0) return <p>No hay contenido disponible.</p>;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-10  mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-30  ">
+    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-10  mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-30  ">
       {content.map((item) => (
         <Link href={`/content/${item._id}`} key={item._id}>
           <article

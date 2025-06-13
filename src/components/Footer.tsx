@@ -1,9 +1,13 @@
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
-export default function Footer() {
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className = "" }: FooterProps) {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-[#0a0f14] border-t border-[#10ff2b]/50">
+    <footer className={`bg-[#0a0f14] border-t border-[#10ff2b]/50 ${className}`}>
       <div className="max-w-screen-xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Main Footer Content */}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Breadcrumb } from "@/components/ContentBreadcrumbs";
 import { useParams } from "next/navigation";
-import { Share2, Clock, Calendar } from "lucide-react";
+import { Clock, Calendar } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { format } from "date-fns";
 
@@ -108,16 +108,10 @@ export default function ContentDetail() {
             </div>
           </div>
           <div className="flex gap-x-2">
-            <span className="bg-gradient-to-r from-black to-[#001111] border-[#10ff2b] border text-[#10ff2b] rounded-lg px-2 py-1  text-md uppercase font-bold ">
+            <span className="text-[#10ff2b] rounded-lg px-2 py-1  text-md uppercase font-bold ">
               {content.category}
             </span>
-            <button
-              onClick={handleShare}
-              className="p-2 rounded-lg transition-colors"
-              title="Share this content"
-            >
-              <Share2 className="h-5 w-5 text-[#10ff2b]" />
-            </button>
+           
           </div>
         </div>
       </div>
