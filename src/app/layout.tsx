@@ -16,6 +16,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
+        <meta name="description" content="Portfolio de Franklin Perez Muñoz" />
+        <meta name="keywords" content="Franklin Perez Muñoz, Portfolio, Desarrollador Full Stack" />
+        <meta name="author" content="Franklin Perez Muñoz" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta property="og:image" content="/assets/profile.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-screen flex flex-col font-jetbrains-mono bg-radial-[at_25%_25%] from-black via-[#0a0f14] to-[#1c1d1d]">

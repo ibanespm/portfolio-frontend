@@ -18,7 +18,7 @@ import {
 export default function Page() {
   return (
     <div
-      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-25 xl:py-20`}
+      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-15 xl:py-5`}
     >
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">

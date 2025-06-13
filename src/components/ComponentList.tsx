@@ -58,22 +58,22 @@ export default function ContentList({ filters }: ContentListProps) {
   if (content.length === 0) return <p>No hay contenido disponible.</p>;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-10 mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-20  ">
+    <div className="grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-10 mt-5 mx-3 sm:mx-5 md:mx-8 lg:mx-20  ">
       {content.map((item) => (
-        <Link href={`/content/${item._id}`} key={item._id}>
+        <Link href={`/content/${item._id}`} key={item._id} className="m-auto">
           <article
             key={item._id}
-            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-b-white/20  shadow-md w-full max-w-md flex flex-col justify-between h-full "
+            className="bg-gradient-to-br to-[#0a0f14] from-[#000000] rounded-md border border-b-white/20  shadow-md w-full max-w-lg flex flex-col justify-between h-full "
           >
             {item.type === "video" ? (
               <video
                 controls
-                className="w-full h-48 object-cover rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-lg"
               >
                 <source src={item.url} />
               </video>
             ) : (
-              <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="w-full h-56 relative mb-4 rounded-lg overflow-hidden flex items-center justify-center">
                 <Image
                   src={item.url}
                   alt={item.title}
