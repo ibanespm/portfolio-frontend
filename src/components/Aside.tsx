@@ -76,7 +76,7 @@ export const Aside: React.FC<AsideProps> = ({ className = "" }) => {
               </span>
             </a>
             <a
-              href="https://github.com/tuperfil"
+              href="https://github.com/ibanespm"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative hover:text-[#10ff2b] transition-colors"
