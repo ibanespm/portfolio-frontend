@@ -15,7 +15,7 @@ interface AsideProps {
 export const Aside: React.FC<AsideProps> = ({ className = "" }) => {
   return (
     <aside
-      className={` border-r border-[#10ff2b]/50 text-gray-400 ${className} `}
+      className={`border-r-0 lg:border-r  lg:border-[#10ff2b]/50 text-gray-400 ${className} py-10 sm:pt-10 md:pt-20`}
     >
       <div className="p-4 space-y-8">
         <div className="flex justify-center">

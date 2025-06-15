@@ -21,7 +21,7 @@ export default function ContentPage() {
     setFilters(newFilters);
   }, []);
   return (
-    <div className="flex flex-col min-h-screen sm:py-40 md:py-10 lg:py-5 ">
+    <div className="flex flex-col min-h-screen pt-0 sm:pt-5 md:py-20 lg:py-10 ">
       <ContentFilters onFilterchange={handleFilterChange}/>
       <Breadcrumb />
       <ContentList filters={filters} />
