@@ -1,27 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useState, useRef, useEffect } from "react";
 
 export default function Navbar() {
-  // Estado para controlar la visibilidad del menú en móvil
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
-  //function for active
   const isActive = (href: string) => pathname === href;
 
-  // Función para alternar el menú
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    // Cerrar la búsqueda si está abierta
+    if (isSearchOpen) setIsSearchOpen(false);
   };
 
-  // Función para alternar la búsqueda en móvil
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
+    // Cerrar el menú si está abierto
+    if (isMenuOpen) setIsMenuOpen(false);
   };
+
+  // Efecto para cerrar el menú al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+
+      if (
+        isSearchOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen, isSearchOpen]);
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-black fixed top-0 left-0 w-full z-50 shadow-md">
@@ -91,6 +121,7 @@ export default function Navbar() {
 
           {/* Botón hamburguesa para menú (móvil) */}
           <button
+            ref={hamburgerRef}
             onClick={toggleMenu}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -118,6 +149,7 @@ export default function Navbar() {
 
         {/* Menú de navegación */}
         <div
+          ref={menuRef}
           className={`${
             isMenuOpen ? "block" : "hidden"
           } items-center justify-between w-full md:flex md:w-auto md:order-1`}
@@ -164,6 +196,7 @@ export default function Navbar() {
                     ? "bg-gradient-to-r text-[#10ff2b]"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 } hover:bg-gray-50 dark:hover:bg-gray-700`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -192,6 +225,7 @@ export default function Navbar() {
                     ? "bg-gradient-to-r text-[#10ff2b]"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 } hover:bg-gray-50 dark:hover:bg-gray-700`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -221,6 +255,7 @@ export default function Navbar() {
                     ? "bg-gradient-to-r text-[#10ff2b]"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 } hover:bg-gray-50 dark:hover:bg-gray-700`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -244,34 +279,6 @@ export default function Navbar() {
               </Link>
             </li>
 
-
-            {/* <li>
-              <Link
-                href="/pro"
-                className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  isActive("/pro")
-                    ? "bg-gradient-to-r text-[#10ff2b]"
-                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-                } hover:bg-gray-50 dark:hover:bg-gray-700`}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-crown w-5 h-5"
-                >
-                  <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
-                  <path d="M5 21h14" />
-                </svg>
-                PRO
-              </Link>
-            </li> */}
             <li>
               <Link
                 href="/projects"
@@ -280,6 +287,7 @@ export default function Navbar() {
                     ? "bg-gradient-to-r text-[#10ff2b]"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 } hover:bg-gray-50 dark:hover:bg-gray-700`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

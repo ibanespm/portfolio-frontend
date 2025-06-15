@@ -12,6 +12,10 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+
+   
+
+
   return (
     <html lang="en">
       <head>
@@ -28,10 +32,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <AuthProvider>
           <Navbar />
           <div className="min-h-screen">
-            <Aside className="fixed top-20 left-0 h-[calc(100vh-5rem)] w-[20%] hidden md:block border-r border-[#10ff2b] p-4 z-40" />
+            <Aside className="fixed top-20 left-0 h-[calc(100vh-1rem)] w-[20%] hidden lg:block border-r border-[#10ff2b] p-4 z-40" />
 
-            <div className="ml-0 md:ml-[20%] w-full md:w-[80%]">
-              <main className="px-4 md:px-7 xl:px-10 py-20">{children}</main>
+            <div className="ml-0 lg:ml-[20%] w-full lg:w-[80%]">
+              <main className="px-4 lg:px-7 xl:px-10 py-20">{children}</main>
               <Footer />
             </div>
           </div>
