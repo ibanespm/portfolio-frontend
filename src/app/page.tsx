@@ -18,13 +18,13 @@ import {
 export default function Page() {
   return (
     <div
-      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 pt-10 md:pt-5 xl:pt-5`}
+      className={`flex flex-col min-h-screen mx-0 md:mx-7 xl:mx-10 pt-10 md:pt-5 xl:pt-5`}
     >
       {/* Sección Hero */}
-      <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
+      <div className="relative  dark:bg-neutral-900 mx-2 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
-        <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5 px-4 sm:px10 md:px-7 lg:px-10 xl:px-12 2xl:px-14">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-4 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
+        <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5 px-4 sm:px-10 md:px-7 lg:px-10 xl:px-12 2xl:px-14">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-4 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
             Desarrollador de Software
           </h1>
 
@@ -42,43 +42,43 @@ export default function Page() {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 text-center pb-4 text-white items-center">
               <div className="flex flex-col items-center">
                 <SiReact size={32} color="#61DAFB" />
-                <span className="mt-2 text-sm">React</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">React</span>
               </div>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-c ol items-center">
                 <SiNestjs size={32} color="#E0234E" />
-                <span className="mt-2 text-sm">NestJS</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">NestJS</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiDjango size={32} color="#092E20" />
-                <span className="mt-2 text-sm">Django</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Django</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiJavascript size={32} color="#F7DF1E" />
-                <span className="mt-2 text-sm">JavaScript</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">JavaScript</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiDocker size={32} color="#2496ED" />
-                <span className="mt-2 text-sm">Docker</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Docker</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiPostgresql size={32} color="#336791" />
-                <span className="mt-2 text-sm">PostgreSQL</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">PostgreSQL</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiLinux size={32} color="#FCC624" />
-                <span className="mt-2 text-sm">Linux</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Linux</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiPython size={32} color="#3776AB" />
-                <span className="mt-2 text-sm">Python</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Python</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiGit size={32} color="#F05032" />
-                <span className="mt-2 text-sm">Git</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Git</span>
               </div>
               <div className="flex flex-col items-center">
                 <SiGithub size={32} color="#ffffff" />
-                <span className="mt-2 text-sm">GitHub</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">GitHub</span>
               </div>
 
               <div className="flex flex-col items-center">
@@ -88,7 +88,7 @@ export default function Page() {
                   width={32}
                   height={32}
                 />
-                <span className="mt-2 text-sm">Scikit-learn</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Scikit-learn</span>
               </div>
               {/* <div className="flex flex-col items-center">
                 <Image
@@ -106,7 +106,7 @@ export default function Page() {
                   width={32}
                   height={32}
                 />
-                <span className="mt-2 text-sm">Pandas</span>
+                <span className="mt-2 text-xs sm:text-sm md:text-base">Pandas</span>
               </div>
               <div className="flex flex-col items-center">
                 <Image

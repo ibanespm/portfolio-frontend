@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </button>
 
             <div className="ml-0 lg:ml-[20%] w-full lg:w-[80%]">
-              <main className="px-4 lg:px-7 xl:px-10 pt-14">{children}</main>
+              <main className="px-2 sm:px-4 lg:px-7 xl:px-10 pt-14">{children}</main>
               <Footer />
             </div>
           </div>
