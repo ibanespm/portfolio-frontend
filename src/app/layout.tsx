@@ -35,7 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Aside className="fixed top-20 left-0 h-[calc(100vh-1rem)] w-[20%] hidden lg:block border-r border-[#10ff2b] p-4 z-40" />
 
             <div className="ml-0 lg:ml-[20%] w-full lg:w-[80%]">
-              <main className="px-4 lg:px-7 xl:px-10 py-20">{children}</main>
+              <main className="px-4 lg:px-7 xl:px-10 pt-14">{children}</main>
               <Footer />
             </div>
           </div>

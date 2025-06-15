@@ -18,17 +18,17 @@ import {
 export default function Page() {
   return (
     <div
-      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 py-20 md:py-15 xl:py-5`}
+      className={`flex flex-col min-h-screen mx-1 md:mx-7 xl:mx-10 pt-10 md:pt-5 xl:pt-5`}
     >
       {/* Sección Hero */}
       <div className="relative  dark:bg-neutral-900 mx-4 mt-4 rounded-xl overflow-hidden">
         {/* Contenido principal */}
-        <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5">
+        <div className="relative z-10 max-w-5xl mx-auto text-center p-2 pb-5 px-4 sm:px10 md:px-7 lg:px-10 xl:px-12 2xl:px-14">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-4 bg-gradient-to-r from-[#10ff2b] to-[#00d1b2] bg-clip-text text-transparent break-words leading-tight">
             Desarrollador de Software
           </h1>
 
-          <p className="text-2x md:text-md text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-2x md:text-md text-gray-600 dark:text-gray-300 mb-8 sm:mb-8 md:mb-8 lg:mb-8 xl:mb-8 2xl:mb-8">
             Soy desarrollador Fullstack en React, NestJS, Django y
             JavaScript.También trabajo con Docker y bases de datos SQL para
             construir aplicaciones escalables. En este portafolio comparto
@@ -39,7 +39,7 @@ export default function Page() {
             <h2 className="text-2xl font-semibold text-[#10ff2b] mb-4">
               Tecnologías
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-6 gap-6 text-center text-white p-3">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 gap-2 text-center pb-4 text-white items-center">
               <div className="flex flex-col items-center">
                 <SiReact size={32} color="#61DAFB" />
                 <span className="mt-2 text-sm">React</span>
@@ -243,7 +243,7 @@ export default function Page() {
             key={item.name}
             className="h-40 bg-gradient-to-br from-black via-[#1111]  shadow-sm shadow-[#10ff2b]  rounded-lg flex flex-col items-center justify-center gap-2"
           >
-            <div className="text-white py-4 ">{item.icon}</div>
+            <div className="text-white pt-4 ">{item.icon}</div>
             <span className=" text-md whitespace-wrap font-bold text-[#10ff2b] ">
               {item.name}
             </span>

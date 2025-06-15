@@ -93,7 +93,7 @@ export default function Page() {
             <h4 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[#10ff2b] via-[#00d1b2] to-[#10ff2b] bg-clip-text text-transparent">
               Métodos de Pago
             </h4>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-md md:text-xl text-gray-600 dark:text-gray-300">
               Aceptamos múltiples métodos de pago para tu conveniencia.
             </p>
           </div>
